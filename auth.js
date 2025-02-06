@@ -10,12 +10,12 @@ const authenticate=async(req,res,next)=>{
     try{
         const result=jwt.verify(token,process.env.SECRET_KEY);
         req.body.username=result.username;
-        console.log(result);
+        // console.log(result);
         next();
     }
     catch(error)
     {
-        console.log(error);
+        // console.log(error);
         return res.json({message:"Invalid token"});
     }
 }

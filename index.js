@@ -45,7 +45,7 @@ app.post("/signup",body('username').isLength({min:3}),body('email').isEmail(),bo
     
     const {username,email,password}=req.body;
 
-    console.log(username,email,password);
+    // console.log(username,email,password);
     if(!username || !email || !password)
     {
         return res.json({message:"Please fill all the details"});
