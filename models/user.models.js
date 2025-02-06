@@ -32,12 +32,12 @@ userSchema.pre("save",async function(next){
 
 userSchema.methods.checkPassword=async function(password){
     const result=await bcrypt.compare(password,this.password);
-    console.log(result);
+    // console.log(result);
     return result;
 }
 
 userSchema.methods.checkEmail=async function(email){
-    console.log(email,this.email);
+    // console.log(email,this.email);
     return this.email==email;
 }
 
